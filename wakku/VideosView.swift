@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct VideosView: View {
+    @Environment(\.modelContext) private var modelContext
+    @State private var selectedVideo: Video?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VideoListView(selectedVideo: $selectedVideo)
+            .toolbar {
+                Button("Add video", systemImage: "video.fill.badge.plus", action: addVideo)
+            }
+    }
+    
+    func addVideo() {
+        let video = Video()
+        selectedVideo = video
+        modelContext.insert(video)
     }
 }
 

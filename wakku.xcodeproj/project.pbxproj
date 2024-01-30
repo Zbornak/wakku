@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		DBBD7E492B69025300EA9C61 /* wakkuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD7E482B69025300EA9C61 /* wakkuApp.swift */; };
-		DBBD7E4B2B69025300EA9C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD7E4A2B69025300EA9C61 /* ContentView.swift */; };
 		DBBD7E4D2B69025300EA9C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBD7E4C2B69025300EA9C61 /* Assets.xcassets */; };
 		DBBD7E502B69025300EA9C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBD7E4F2B69025300EA9C61 /* Preview Assets.xcassets */; };
+		DBBD7E5B2B6903E400EA9C61 /* ModelSchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD7E5A2B6903E400EA9C61 /* ModelSchemaV1.swift */; };
+		DBBD7E5D2B69056900EA9C61 /* SwiftData+TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD7E5C2B69056900EA9C61 /* SwiftData+TypeAliases.swift */; };
+		DBBD7E5F2B6906CF00EA9C61 /* EditVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD7E5E2B6906CF00EA9C61 /* EditVideoView.swift */; };
+		DBBD7E612B69095800EA9C61 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD7E602B69095800EA9C61 /* VideoListView.swift */; };
+		DBBD7E632B690D0B00EA9C61 /* VideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD7E622B690D0B00EA9C61 /* VideosView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DBBD7E452B69025300EA9C61 /* wakku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wakku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBD7E482B69025300EA9C61 /* wakkuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wakkuApp.swift; sourceTree = "<group>"; };
-		DBBD7E4A2B69025300EA9C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DBBD7E4C2B69025300EA9C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBBD7E4F2B69025300EA9C61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBBD7E5A2B6903E400EA9C61 /* ModelSchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSchemaV1.swift; sourceTree = "<group>"; };
+		DBBD7E5C2B69056900EA9C61 /* SwiftData+TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftData+TypeAliases.swift"; sourceTree = "<group>"; };
+		DBBD7E5E2B6906CF00EA9C61 /* EditVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVideoView.swift; sourceTree = "<group>"; };
+		DBBD7E602B69095800EA9C61 /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
+		DBBD7E622B690D0B00EA9C61 /* VideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,11 @@
 		DBBD7E472B69025300EA9C61 /* wakku */ = {
 			isa = PBXGroup;
 			children = (
+				DBBD7E582B6903A200EA9C61 /* SwiftData */,
 				DBBD7E482B69025300EA9C61 /* wakkuApp.swift */,
-				DBBD7E4A2B69025300EA9C61 /* ContentView.swift */,
+				DBBD7E5E2B6906CF00EA9C61 /* EditVideoView.swift */,
+				DBBD7E602B69095800EA9C61 /* VideoListView.swift */,
+				DBBD7E622B690D0B00EA9C61 /* VideosView.swift */,
 				DBBD7E4C2B69025300EA9C61 /* Assets.xcassets */,
 				DBBD7E4E2B69025300EA9C61 /* Preview Content */,
 			);
@@ -65,6 +76,23 @@
 				DBBD7E4F2B69025300EA9C61 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBBD7E582B6903A200EA9C61 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				DBBD7E592B6903B100EA9C61 /* ModelSchemas */,
+				DBBD7E5C2B69056900EA9C61 /* SwiftData+TypeAliases.swift */,
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		DBBD7E592B6903B100EA9C61 /* ModelSchemas */ = {
+			isa = PBXGroup;
+			children = (
+				DBBD7E5A2B6903E400EA9C61 /* ModelSchemaV1.swift */,
+			);
+			path = ModelSchemas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBBD7E4B2B69025300EA9C61 /* ContentView.swift in Sources */,
+				DBBD7E5D2B69056900EA9C61 /* SwiftData+TypeAliases.swift in Sources */,
+				DBBD7E612B69095800EA9C61 /* VideoListView.swift in Sources */,
+				DBBD7E632B690D0B00EA9C61 /* VideosView.swift in Sources */,
 				DBBD7E492B69025300EA9C61 /* wakkuApp.swift in Sources */,
+				DBBD7E5F2B6906CF00EA9C61 /* EditVideoView.swift in Sources */,
+				DBBD7E5B2B6903E400EA9C61 /* ModelSchemaV1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

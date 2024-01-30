@@ -5,4 +5,8 @@
 //  Created by Mark Strijdom on 30/01/2024.
 //
 
-import Foundation
+import SwiftData
+import SwiftUI
+
+typealias Video = ModelSchemaV1.Video
+typealias Keyword = ModelSchemaV1.Keyword
