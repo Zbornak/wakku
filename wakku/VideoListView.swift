@@ -11,6 +11,13 @@ import SwiftUI
 struct VideoListView: View {
     @Query var videos: [Video]
     @Binding var selectedVideo: Video?
+    @Binding var deletedVideo: Video?
+    
+    init(sortDescriptor: SortDescriptor<Video>, selectedVideo: Binding<Video?>, deletedVideo: Binding<Video?>) {
+        _videos = Query(sort: [sortDescriptor])
+        _selectedVideo = selectedVideo
+        _deletedVideo = deletedVideo
+    }
     
     var body: some View {
         List {
@@ -18,6 +25,7 @@ struct VideoListView: View {
                     cell(video)
                     .listRowInsets(.init(top: 12, leading: 0, bottom: 12, trailing: 0))
             }
+            .onDelete(perform: delete(_:))
         }
         .sheet(item: $selectedVideo) { video in
             NavigationStack {
@@ -52,6 +60,16 @@ struct VideoListView: View {
                     }
                 }
             }
+        }
+        .onTapGesture {
+            selectedVideo = video
+        }
+    }
+    
+    func delete(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let video = videos[index]
+            deletedVideo = video
         }
     }
 }
