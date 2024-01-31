@@ -14,7 +14,7 @@ struct wakkuApp: App {
     
     init() {
         do {
-            container = try ModelContainer(for: Video.self, Keyword.self, migrationPlan: nil)
+            container = try ModelContainer(for: Video.self, Keyword.self, migrationPlan: DatabaseMigrationPlan.self)
         } catch {
             fatalError("Failed to initialise model container.")
         }

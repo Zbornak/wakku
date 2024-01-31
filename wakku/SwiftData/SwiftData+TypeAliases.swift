@@ -8,5 +8,5 @@
 import SwiftData
 import SwiftUI
 
-typealias Video = ModelSchemaV1.Video
-typealias Keyword = ModelSchemaV1.Keyword
+typealias Video = ModelSchemaV2.Video
+typealias Keyword = ModelSchemaV2.Keyword

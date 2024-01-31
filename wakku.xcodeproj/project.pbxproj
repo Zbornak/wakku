@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB46C2332B6A7F9700303877 /* ModelSchemaV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46C2322B6A7F9700303877 /* ModelSchemaV2.swift */; };
+		DB46C2352B6A800C00303877 /* DatabaseMigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46C2342B6A800C00303877 /* DatabaseMigrationPlan.swift */; };
 		DBBD7E492B69025300EA9C61 /* wakkuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD7E482B69025300EA9C61 /* wakkuApp.swift */; };
 		DBBD7E4D2B69025300EA9C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBD7E4C2B69025300EA9C61 /* Assets.xcassets */; };
 		DBBD7E502B69025300EA9C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBD7E4F2B69025300EA9C61 /* Preview Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB46C2322B6A7F9700303877 /* ModelSchemaV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSchemaV2.swift; sourceTree = "<group>"; };
+		DB46C2342B6A800C00303877 /* DatabaseMigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseMigrationPlan.swift; sourceTree = "<group>"; };
 		DBBD7E452B69025300EA9C61 /* wakku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wakku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBD7E482B69025300EA9C61 /* wakkuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wakkuApp.swift; sourceTree = "<group>"; };
 		DBBD7E4C2B69025300EA9C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			children = (
 				DBBD7E592B6903B100EA9C61 /* ModelSchemas */,
 				DBBD7E5C2B69056900EA9C61 /* SwiftData+TypeAliases.swift */,
+				DB46C2342B6A800C00303877 /* DatabaseMigrationPlan.swift */,
 			);
 			path = SwiftData;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				DBBD7E5A2B6903E400EA9C61 /* ModelSchemaV1.swift */,
+				DB46C2322B6A7F9700303877 /* ModelSchemaV2.swift */,
 			);
 			path = ModelSchemas;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB46C2352B6A800C00303877 /* DatabaseMigrationPlan.swift in Sources */,
 				DBBD7E5D2B69056900EA9C61 /* SwiftData+TypeAliases.swift in Sources */,
+				DB46C2332B6A7F9700303877 /* ModelSchemaV2.swift in Sources */,
 				DBBD7E612B69095800EA9C61 /* VideoListView.swift in Sources */,
 				DBBD7E632B690D0B00EA9C61 /* VideosView.swift in Sources */,
 				DBBD7E492B69025300EA9C61 /* wakkuApp.swift in Sources */,

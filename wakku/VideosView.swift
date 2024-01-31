@@ -12,9 +12,10 @@ struct VideosView: View {
     @State private var selectedVideo: Video?
     @State private var deletedVideo: Video?
     @State private var sortDescriptor = SortDescriptor(\Video.title)
+    @State private var searchText = ""
     
     var body: some View {
-        VideoListView(sortDescriptor: sortDescriptor, selectedVideo: $selectedVideo, deletedVideo: $deletedVideo)
+        VideoListView(sortDescriptor: sortDescriptor, searchText: searchText, selectedVideo: $selectedVideo, deletedVideo: $deletedVideo)
             .toolbar {
                 Button("Add video", systemImage: "video.fill.badge.plus", action: addVideo)
                 
@@ -32,6 +33,7 @@ struct VideosView: View {
                 guard let video = newValue else { return }
                 delete(video)
             }
+            .searchable(text: $searchText)
     }
     
     func addVideo() {
